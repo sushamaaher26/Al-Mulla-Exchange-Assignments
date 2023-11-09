@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./alMullaExchange.jpg" />
+    <title>Employee Onbording Form</title>
+
+    <style>
+      body {
+        background-image: linear-gradient(#d1e8e1, #a6d577);
+      }
+      .navbar {
+        background-color: rgb(52, 52, 52);
+      }
+
+      .navbar img {
+        margin: 2px;
+        margin-left: 70px;
+      }
+      .container {
+        color: white;
+        font-size: 19px;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 5%;
+        padding-top: 3%;
+        background-color: #00ad41;
+        line-height: 120%;
+        border-radius: 15px;
+        margin-top: 40px;
+      }
+
+      .emp-onbording {
+        text-align: center;
+        line-height: 120%;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+      .form-group {
+        font-weight: bold;
+      }
+      .form-input {
+        width: 60%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: left;
+      }
+
+      label {
+        font-weight: bold;
+        width: 30%;
+        clear: left;
+        text-align: left;
+        padding-right: 10px;
+        float: left;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: 8%;
+      }
+
+      .btn {
+        text-align: center;
+        font-size: 100%;
+        font-weight: bold;
+        width: 30%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: rgb(121, 121, 121);
+      }
+
+      .btn-group {
+        text-align: center;
+      }
+
+      .btn:hover {
+        color: rgb(181, 175, 175);
+      }
+
+      @media only screen and (min-width: 200px) and (max-width: 399px) {
+        label {
+          width: 100%;
+        }
+
+        .form-input {
+          width: 85%;
+        }
+
+        .rdo-gender,
+        .rdo-married,
+        .check-lang {
+          display: inline-flex;
+          flex-direction: column;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+          width: 6%;
+        }
+      }
+
+      @media only screen and (min-width: 400px) and (max-width: 600px) {
+        .rdo-gender,
+        .rdo-married,
+        .check-lang {
+          display: inline-flex;
+          flex-direction: column;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+          width: 3%;
+        }
+      }
+
+      .btn {
+        width: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="navbar">
+        <img src="./alMullaExchangeFullLogo.jpg" alt="logo" />
+      </div>
+    </div>
+
+    <div class="container">
+      <form name="myForm">
+        <h1 class="emp-onbording">Employee Onbording</h1>
+
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input
+            class="form-input"
+            type="text"
+            placeholder="Enter your full name"
+            id="name"
+            name="name"
+          />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            class="form-input"
+            type="email"
+            placeholder="abc@gmail.com"
+            id="email"
+            name="email"
+          />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="emp_code">Employee Code:</label>
+          <input class="form-input" type="text" id="emp_code" name="emp_code" />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="phone_number">Phone Number:</label>
+          <input
+            class="form-input"
+            type="tel"
+            id="phone_number"
+            placeholder="Enter your 10-digit phone number"
+            name="phone_number"
+          />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="date_of_birth">Date of Birth: </label>
+          <input
+            class="form-input"
+            type="date"
+            id="date_of_birth"
+            name="date_of_birth"
+          />
+        </div>
+        <br />
+
+        <div class="form-group" class="rdo-gender">
+          <div>
+            <label class="rdo-btn" for="gender">Gender:</label>
+          </div>
+          <div>
+            <input
+              class="form-input"
+              type="radio"
+              id="male"
+              name="gender"
+              value="Male"
+            />Male
+            <input
+              class="form-input"
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
+            />Female
+            <input
+              class="form-input"
+              type="radio"
+              id="other"
+              name="gender"
+              value="Other"
+            />Other
+          </div>
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input class="form-input" type="text" id="address" name="address" />
+        </div>
+        <br />
+
+        <div class="form-group" class="rdo-married">
+          <div>
+            <label class="rdo-btn" for="marital_status">Marital Status:</label>
+          </div>
+        </div>
+
+        <div>
+          <input
+            class="form-input"
+            type="radio"
+            name="marital_status"
+            id="married"
+            value="Married"
+          />Married
+          <input
+            class="form-input"
+            type="radio"
+            name="marital_status"
+            id="unmarried"
+            value="Unmarried"
+          />Unmarried
+        </div>
+
+        <br />
+
+        <div class="form-group">
+          <label for="state">State:</label>
+          <select class="form-input">
+            <option value="none" selected disabled hidden>
+              Select an Option
+            </option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="name">Nationality:</label>
+          <input
+            class="form-input"
+            type="text"
+            id="nationality"
+            name="nationality"
+          />
+        </div>
+        <br />
+
+        <div class="form-group" class="check-lang">
+          <div><label for="language">Languages:</label></div>
+          <div>
+            <input
+              class="form-input"
+              type="checkbox"
+              id="english"
+              name="language"
+              value="English"
+            />
+            English
+            <input
+              class="form-input"
+              type="checkbox"
+              id="hindi"
+              name="language"
+              value="Hindi"
+            />
+            Hindi
+            <input
+              class="form-input"
+              type="checkbox"
+              id="other"
+              name="language"
+              value="Other"
+            />
+            Other
+          </div>
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="technical_expertise">Technical Experties:</label>
+          <input
+            class="form-input"
+            type="text"
+            id="technical_expertise"
+            name="technical_expertise"
+          />
+        </div>
+        <br />
+
+        <div class="form-group">
+          <label for="bio">Write About Yourself:</label>
+          <input
+            class="form-input"
+            type="text"
+            id="About_Yourself"
+            name="About_Yourself"
+          />
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <div class="btn-group">
+          <button class="btn" id="clearBtn" type="button" name="forms">
+            Clear
+          </button>
+          <button class="btn" id="submitBtn" type="submit" name="forms">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        var name = document.forms["myForm"]["name"].value;
+        var email = document.forms["myForm"]["email"].value;
+        var phoneNumber = document.forms["myForm"]["phone_number"].value;
+
+        // Name validation
+        if (name === "" || name == null) {
+          alert("Name must be filled out");
+          return false;
+        }
+
+        // Email validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert("Invalid email address");
+          return false;
+        }
+
+        // Phone number validation
+        var phoneNumberPattern = /^\d{10}$/;
+        if (!phoneNumberPattern.test(phoneNumber)) {
+          alert("Invalid phone number. Please enter a 10-digit number.");
+          return false;
+        }
+
+        return true; // Form submission is allowed
+      }
+
+      function clearForm() {
+        document.forms["myForm"].reset();
+      }
+
+      function storeData() {
+        // Capture form data as an object
+        var formData = {
+          Name: document.getElementById("name").value,
+          Email: document.getElementById("email").value,
+          EmployeeCode: document.getElementById("emp_code").value,
+          PhoneNumber: document.getElementById("phone_number").value,
+          DateOfBirth: document.getElementById("date_of_birth").value,
+          Gender: document.querySelector('input[name="gender"]:checked').value,
+          Address: document.getElementById("address").value,
+          MaritalStatus: document.querySelector(
+            'input[name="marital_status"]:checked'
+          ).value,
+          State: document.querySelector("select.form-input").value,
+          Nationality: document.getElementById("nationality").value,
+          Languages: [],
+          TechnicalExpertise: document.getElementById("technical_expertise")
+            .value,
+          AboutYourself: document.getElementById("About_Yourself").value,
+        };
+
+        // selected languages are captured
+        var languageCheckboxes = document.querySelectorAll(
+          'input[name="language"]:checked'
+        );
+
+        languageCheckboxes.forEach(function (checkbox) {
+          formData.Languages.push(checkbox.value);
+        }),
+          // Save form data in local storage
+          localStorage.setItem("formData", JSON.stringify(formData));
+      }
+
+      document.getElementById("clearBtn").addEventListener("click", clearForm);
+      document
+        .getElementById("submitBtn")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          if (validateForm() == true) {
+            storeData();
+            window.location.href = "thank.html";
+          }
+        });
+    </script>
+  </body>
+</html>
